@@ -19,4 +19,8 @@ If performance is of any concern to you, consider building GROMACS from source. 
 ```
 Check the output of `cmake` carefully and make adjustments if needed. Don't forget to run the tests after building the software.
 
+## Post-installation
+
+The force fields (FFs) bundled with GROMACS are quite ancient. If comparison with previous works (utilizing these FFs) is not your primary goal, more recent FFs should be downloaded, installed, and used. Good choices include the [CHARMM36](https://mackerell.umaryland.edu/charmm_ff.shtml#gromacs) or the [ff14SB/OL](https://fch.upol.cz/ff_ol/gromacs.php) FFs; other FFs are available as volunteer contributions on the [GROMACS website](http://www.gromacs.org/Downloads_of_outdated_releases/User_contributions/Force_fields).
+
 
