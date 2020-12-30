@@ -1,0 +1,17 @@
+integrator              = steep
+nsteps                  = -1        ; steps
+
+emtol                   = 50.0      ; kJ mol^-1 nm^-1
+
+cutoff-scheme           = Verlet
+nstlist                 = 1         ; steps
+pbc                     = xyz
+
+coulombtype             = PME
+rcoulomb                = 1.2       ; nm
+
+vdwtype                 = Cut-off
+vdw-modifier            = Force-switch
+rvdw                    = 1.2       ; nm
+rvdw-switch             = 1.0       ; nm
+DispCorr                = no

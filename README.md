@@ -21,6 +21,10 @@ Check the output of `cmake` carefully and make adjustments if needed. Don't forg
 
 ## Post-installation
 
-The force fields (FFs) bundled with GROMACS are quite ancient. If comparison with previous works (utilizing these FFs) is not your primary goal, more recent FFs should be downloaded, installed, and used. Good choices include the [CHARMM36](https://mackerell.umaryland.edu/charmm_ff.shtml#gromacs) or the [ff14SB/OL](https://fch.upol.cz/ff_ol/gromacs.php) FFs; other FFs are available as volunteer contributions on the [GROMACS website](http://www.gromacs.org/Downloads_of_outdated_releases/User_contributions/Force_fields).
+The force fields (FFs) bundled with GROMACS are quite ancient. If comparison with previous works (utilizing these FFs) is not your primary goal, more recent FFs should be downloaded, installed, and used. Good choices include the [CHARMM36](https://mackerell.umaryland.edu/charmm_ff.shtml#gromacs) or the [ff14SB/OL15](https://fch.upol.cz/ff_ol/gromacs.php) FFs; other FFs are available as volunteer contributions on the [GROMACS website](http://www.gromacs.org/Downloads_of_outdated_releases/User_contributions/Force_fields).
+
+## Running MD simulations
+
+Instructions for running various kinds of MD simulations can be found in `protocols/`. Protocol names have the form `FF_system[_modification]`, where `FF` is the name of the FF used, `system` is the type of biological system simulated (*e.g.*, protein, DNA, lipid, ...), and `modification` is an optional alteration of the base protocol (for the given FF and system type). It is expected that FF files `amber14sb_OL15.ff` and `charmm36-jul2020.ff` are installed on the system when using the respective protocols.
 
 

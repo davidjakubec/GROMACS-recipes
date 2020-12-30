@@ -1,0 +1,37 @@
+integrator              = md
+dt                      = 0.002     ; ps
+nsteps                  = 500000000 ; steps
+comm-mode               = Linear
+
+nstlog                  = 5000      ; steps
+nstenergy               = 5000      ; steps
+nstxout-compressed      = 5000      ; steps
+
+cutoff-scheme           = Verlet
+pbc                     = xyz
+
+coulombtype             = PME
+rcoulomb                = 1.2       ; nm
+
+vdwtype                 = Cut-off
+vdw-modifier            = Force-switch
+rvdw                    = 1.2       ; nm
+rvdw-switch             = 1.0       ; nm
+DispCorr                = no
+
+tcoupl                  = v-rescale
+tc-grps                 = System
+tau-t                   = 1.0       ; ps
+ref-t                   = 298.15    ; K
+
+pcoupl                  = Parrinello-rahman
+pcoupltype              = isotropic
+tau-p                   = 5.0       ; ps
+compressibility         = 4.5e-5    ; bar^-1
+ref-p                   = 1.0       ; bar
+
+gen-vel                 = no
+
+constraints             = h-bonds
+constraint-algorithm    = LINCS
+continuation            = yes

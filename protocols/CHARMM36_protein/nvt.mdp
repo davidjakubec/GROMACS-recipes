@@ -1,0 +1,32 @@
+define                  = -DPOSRES
+
+integrator              = md
+dt                      = 0.002     ; ps
+nsteps                  = 50000     ; steps
+comm-mode               = Linear
+
+cutoff-scheme           = Verlet
+pbc                     = xyz
+
+coulombtype             = PME
+rcoulomb                = 1.2       ; nm
+
+vdwtype                 = Cut-off
+vdw-modifier            = Force-switch
+rvdw                    = 1.2       ; nm
+rvdw-switch             = 1.0       ; nm
+DispCorr                = no
+
+tcoupl                  = v-rescale
+tc-grps                 = System
+tau-t                   = 0.1       ; ps
+ref-t                   = 298.15    ; K
+
+pcoupl                  = no
+
+gen-vel                 = yes
+gen-temp                = 298.15    ; K
+
+constraints             = h-bonds
+constraint-algorithm    = LINCS
+continuation            = no
