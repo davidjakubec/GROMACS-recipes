@@ -4,7 +4,7 @@
 
 GROMACS-recipes is an **unofficial** collection of instructions for using the molecular dynamics (MD) simulation package [GROMACS](http://www.gromacs.org/). The goal is to collect validated protocols for setting up and running the various kinds of MD simulations offered by the software. The contents of this repository are not intended to serve as an introduction to GROMACS or to MD simulations in general.
 
-Unless stated otherwise, GROMACS version **2020.3** is used throughout the examples provided, although the protocols should work with other reasonably recent versions of the software as well.
+Unless stated otherwise, GROMACS versions **2020.3** and **2021.1** are used throughout the examples provided, although the protocols should work with other reasonably recent versions of the software as well.
 
 ## Installation
 
@@ -17,7 +17,17 @@ If performance is of any concern to you, consider building GROMACS from source. 
 -DGMX_GPU=ON \
 -DREGRESSIONTEST_DOWNLOAD=ON
 ```
-Check the output of `cmake` carefully and make adjustments if needed. Don't forget to run the tests after building the software.
+for GROMACS 2020.3, and
+```
+-DCMAKE_C_COMPILER=/usr/bin/gcc-8 \
+-DCMAKE_CXX_COMPILER=/usr/bin/g++-8 \
+-DCMAKE_INSTALL_PREFIX=/home/david/Programs/gromacs-2021.1 \
+-DGMX_BUILD_OWN_FFTW=ON \
+-DGMX_GPU=CUDA \
+-DGMXAPI=OFF \
+-DREGRESSIONTEST_DOWNLOAD=ON
+```
+for GROMACS 2021.1. Check the output of `cmake` carefully and make adjustments if needed. Don't forget to run the tests after building the software.
 
 ## Post-installation
 
