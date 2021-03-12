@@ -35,6 +35,4 @@ The force fields (FFs) bundled with GROMACS are quite ancient. If comparison wit
 
 ## Running MD simulations
 
-Instructions for running various kinds of MD simulations can be found in `protocols/`. Protocol names have the form `FF_system[_modification]`, where `FF` is the name of the FF used, `system` is the type of biological system simulated (*e.g.*, protein, DNA, lipid, ...), and `modification` is an optional alteration of the base protocol (for the given FF and system type). It is expected that FF files `amber14sb_OL15.ff` and `charmm36-jul2020.ff` are installed on the system when using the respective protocols.
-
-
+Instructions for running various kinds of MD simulations can be found in `protocols/`. Protocol names have the form `version_FF_system[_modification]`, where `version` is the GROMACS version used, `FF` is the name of the FF used, `system` is the type of biological system simulated (*e.g.*, protein, DNA, lipid, ...), and `modification` is an optional alteration of the base protocol (for the given GROMACS version, FF, and system type). It is expected that the required FF files are installed on the system when using the respective protocols.
